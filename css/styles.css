@@ -1,13 +1,13 @@
-/* Modernized CSS for mod5-solution website with subtle animations */
+/* Modernized CSS for mod5-solution website with full specificity and guaranteed override */
 
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap');
 
 /* Global Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #F9FAFB;
-    color: #111827;
+html, body {
+    font-family: 'Roboto', sans-serif !important;
+    background-color: #F9FAFB !important;
+    color: #111827 !important;
     margin: 0;
     padding: 0;
     transition: background-color 0.3s, color 0.3s;
@@ -15,79 +15,89 @@ body {
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    color: #1E3A8A;
-    margin: 0 0 10px 0;
-    transition: color 0.3s;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #1E3A8A !important;
+    margin: 0 0 10px 0 !important;
+    transition: color 0.3s !important;
 }
 
 /* Navbar */
-.navbar, .footer {
-    background-color: #1E3A8A;
-    color: #F9FAFB;
-    transition: background-color 0.3s;
+.navbar, .navbar * {
+    background-color: #1E3A8A !important;
+    color: #F9FAFB !important;
+    transition: background-color 0.3s !important, color 0.3s !important;
 }
-.navbar a, .footer a {
-    color: #F9FAFB;
-    text-decoration: none;
-    transition: color 0.3s;
+.navbar a, .navbar a * {
+    color: #F9FAFB !important;
+    text-decoration: none !important;
 }
-.navbar a:hover, .footer a:hover {
-    color: #FACC15;
+.navbar a:hover, .navbar a:hover * {
+    color: #FACC15 !important;
+}
+
+/* Footer */
+.footer, .footer * {
+    background-color: #1E3A8A !important;
+    color: #F9FAFB !important;
+}
+.footer a, .footer a * {
+    color: #F9FAFB !important;
+    text-decoration: none !important;
+}
+.footer a:hover, .footer a:hover * {
+    color: #FACC15 !important;
+}
+.footer p {
+    color: #F9FAFB !important;
+    font-size: 14px !important;
 }
 
 /* Buttons */
-.btn {
-    background-color: #FACC15;
-    color: #1E3A8A;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+.btn, .btn * {
+    background-color: #FACC15 !important;
+    color: #1E3A8A !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 8px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s, transform 0.2s !important;
 }
-.btn:hover {
-    background-color: #3B82F6;
-    color: #FFFFFF;
-    transform: translateY(-2px);
+.btn:hover, .btn:hover * {
+    background-color: #3B82F6 !important;
+    color: #FFFFFF !important;
+    transform: translateY(-2px) !important;
 }
 
 /* Cards / Info Boxes */
-.card, .info-box {
-    background-color: #FFFFFF;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-    padding: 20px;
-    margin: 15px 0;
-    transition: transform 0.3s, box-shadow 0.3s;
+.card, .card *, .info-box, .info-box * {
+    background-color: #FFFFFF !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+    transition: transform 0.3s, box-shadow 0.3s !important;
 }
-.card:hover, .info-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+.card:hover, .card:hover *, .info-box:hover, .info-box:hover * {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1) !important;
 }
 
 /* Icons */
-.icon {
-    color: #1E3A8A;
-    transition: color 0.3s, transform 0.2s;
+.icon, .icon * {
+    color: #1E3A8A !important;
+    transition: color 0.3s, transform 0.2s !important;
 }
-.icon:hover {
-    color: #3B82F6;
-    transform: scale(1.1);
+.icon:hover, .icon:hover * {
+    color: #3B82F6 !important;
+    transform: scale(1.1) !important;
 }
 
 /* Links */
-a {
-    color: #1E3A8A;
-    text-decoration: none;
-    transition: color 0.3s;
+a, a * {
+    color: #1E3A8A !important;
+    text-decoration: none !important;
+    transition: color 0.3s !important;
 }
-a:hover {
-    color: #3B82F6;
-}
-
-/* Footer Text */
-.footer p {
-    color: #F9FAFB;
-    font-size: 14px;
+a:hover, a:hover * {
+    color: #3B82F6 !important;
 }
