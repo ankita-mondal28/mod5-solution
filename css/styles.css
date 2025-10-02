@@ -1,103 +1,150 @@
-/* Modernized CSS for mod5-solution website with full specificity and guaranteed override */
+/* Modernized CSS for your restaurant website */
 
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;500&display=swap');
+/* Import modern Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@500;700&display=swap');
 
-/* Global Styles */
-html, body {
-    font-family: 'Roboto', sans-serif !important;
-    background-color: #F9FAFB !important;
-    color: #111827 !important;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s, color 0.3s;
+/* Body */
+body {
+  font-size: 16px;
+  color: #1F2937; /* Dark gray text */
+  background-color: #F5F7FA; /* Light gray background */
+  font-family: 'Inter', sans-serif;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif !important;
-    color: #1E3A8A !important;
-    margin: 0 0 10px 0 !important;
-    transition: color 0.3s !important;
+/* HEADER */
+#header-nav {
+  background-color: #0F172A; /* Deep blue header */
+  border-radius: 0;
+  border: 0;
 }
 
-/* Navbar */
-.navbar, .navbar * {
-    background-color: #1E3A8A !important;
-    color: #F9FAFB !important;
-    transition: background-color 0.3s !important, color 0.3s !important;
-}
-.navbar a, .navbar a * {
-    color: #F9FAFB !important;
-    text-decoration: none !important;
-}
-.navbar a:hover, .navbar a:hover * {
-    color: #FACC15 !important;
+#logo-img {
+  background: url('../images/restaurant-logo_large.png') no-repeat;
+  width: 150px;
+  height: 150px;
+  margin: 10px 15px 10px 0;
 }
 
-/* Footer */
-.footer, .footer * {
-    background-color: #1E3A8A !important;
-    color: #F9FAFB !important;
+.navbar-brand {
+  padding-top: 25px;
 }
-.footer a, .footer a * {
-    color: #F9FAFB !important;
-    text-decoration: none !important;
+.navbar-brand h1 { /* Restaurant name */
+  font-family: 'Poppins', sans-serif;
+  color: #FACC15; /* Golden text */
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
 }
-.footer a:hover, .footer a:hover * {
-    color: #FACC15 !important;
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
 }
-.footer p {
-    color: #F9FAFB !important;
-    font-size: 14px !important;
+.navbar-brand p { /* Kosher cert */
+  color: #374151; /* Gray text */
+  text-transform: uppercase;
+  font-size: .7em;
+  margin-top: 15px;
+}
+.navbar-brand p span { /* Star-K */
+  vertical-align: middle;
+}
+
+#nav-list a {
+  color: #0F172A;
+  text-align: center;
+  transition: color 0.3s, background 0.3s;
+}
+#nav-list a:hover {
+  background: #E7E7E7;
+  color: #2563EB; /* Hover blue */
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+#phone div {
+  color: #2563EB;
+}
+
+/* FOOTER */
+.panel-footer {
+  margin-top: 30px;
+  padding-top: 35px;
+  padding-bottom: 30px;
+  background-color: #0F172A;
+  border-top: 0;
+}
+#hours > span, #address > span {
+  font-size: 1.3em;
+  color: #FACC15;
+}
+#address p {
+  color: #374151;
+  font-size: .8em;
+  line-height: 1.8;
+}
+#testimonials {
+  font-style: italic;
+}
+
+/* HOME PAGE */
+.container .jumbotron {
+  box-shadow: 0 0 50px rgba(15,23,42,0.2);
+  border: 2px solid rgba(15,23,42,0.2);
+}
+
+#menu-tile, #specials-tile, #map-tile {
+  border: 2px solid rgba(15,23,42,0.2);
+}
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,0.1);
+}
+
+/* Category tiles */
+.category-tile {
+  border: 2px solid rgba(15,23,42,0.2);
+}
+.category-tile:hover {
+  box-shadow: 0 1px 5px 1px rgba(0,0,0,0.1);
+}
+
+/* Menu items */
+.menu-item-photo div {
+  background-color: #FACC15;
+  color: #0F172A;
 }
 
 /* Buttons */
-.btn, .btn * {
-    background-color: #FACC15 !important;
-    color: #1E3A8A !important;
-    border: none !important;
-    padding: 10px 20px !important;
-    border-radius: 8px !important;
-    cursor: pointer !important;
-    transition: background-color 0.3s, transform 0.2s !important;
+.btn, #call-btn > a {
+  background-color: #2563EB;
+  color: #FFFFFF;
+  border-radius: 8px;
+  transition: transform 0.2s, background 0.3s;
 }
-.btn:hover, .btn:hover * {
-    background-color: #3B82F6 !important;
-    color: #FFFFFF !important;
-    transform: translateY(-2px) !important;
-}
-
-/* Cards / Info Boxes */
-.card, .card *, .info-box, .info-box * {
-    background-color: #FFFFFF !important;
-    border-radius: 12px !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05) !important;
-    padding: 20px !important;
-    margin: 15px 0 !important;
-    transition: transform 0.3s, box-shadow 0.3s !important;
-}
-.card:hover, .card:hover *, .info-box:hover, .info-box:hover * {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.1) !important;
+.btn:hover, #call-btn > a:hover {
+  background-color: #1D4ED8;
+  transform: translateY(-2px);
 }
 
 /* Icons */
-.icon, .icon * {
-    color: #1E3A8A !important;
-    transition: color 0.3s, transform 0.2s !important;
+.icon {
+  color: #0F172A;
+  transition: color 0.3s, transform 0.2s;
 }
-.icon:hover, .icon:hover * {
-    color: #3B82F6 !important;
-    transform: scale(1.1) !important;
+.icon:hover {
+  color: #2563EB;
+  transform: scale(1.1);
 }
 
 /* Links */
-a, a * {
-    color: #1E3A8A !important;
-    text-decoration: none !important;
-    transition: color 0.3s !important;
+a {
+  color: #0F172A;
+  text-decoration: none;
+  transition: color 0.3s;
 }
-a:hover, a:hover * {
-    color: #3B82F6 !important;
+a:hover {
+  color: #2563EB;
 }
